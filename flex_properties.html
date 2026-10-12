@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Flex Properties</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .flex-container {
+                /* a. Enacts the Flexbox Layout Context */
+                display: flex;
+
+                /* b. Defines the main axis direction (row, row-reverse, column, column-reverse) */
+                flex-direction: row;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!--Parent flex container-->
+        <div class="flex-container">
+            <!--Immidiate children automatically become children-->
+            <div class="flex-item box-1">1</div>
+            <div class="flex-item box-2">2</div>
+            <div class="flex-item box-2">3</div>
+        </div>
+    </body>
+</html>
