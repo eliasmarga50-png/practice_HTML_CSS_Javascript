@@ -1,36 +1,77 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <title>Flex Properties</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .flex-container {
-                /* a. Enacts the Flexbox Layout Context */
-                display: flex;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Flexbox Playground</title>
+  <style>
+    /* ====================================================
+       THE FLEX CONTAINER (Parent Element)
+       ==================================================== */
+    .flex-container {
+      /* a. Enacts the Flexbox Layout Context */
+      display: flex;
 
-                /* b. Defines the main axis direction (row, row-reverse, column, column-reverse) */
-                flex-direction: row;
+      /* b. Defines the main axis direction (row, row-reverse, column, column-reverse) */
+      flex-direction: row;
 
-                /* c. Aligns items horizontally along the main axis 
-                Try: flex-start, flex-end, center, space-between, space-around */
-                justify-content: space-around;
+      /* c. Aligns items horizontally along the main axis 
+            Try: flex-start, flex-end, center, space-between, space-around */
+      justify-content: space-around;
 
-                /* d. Aligns items vertically along the cross axis 
-                Try: stretch, flex-start, flex-end, center */
-                align-items: center;
-                
-            }
-        </style>
-    </head>
+      /* d. Aligns items vertically along the cross axis 
+            Try: stretch, flex-start, flex-end, center */
+      align-items: center;
 
-    <body>
-        <!--Parent flex container-->
-        <div class="flex-container">
-            <!--Immidiate children automatically become children-->
-            <div class="flex-item box-1">1</div>
-            <div class="flex-item box-2">2</div>
-            <div class="flex-item box-2">3</div>
-        </div>
-    </body>
+      /* e. Forces items to wrap into multi-lines if space runs out (nowrap, wrap) */
+      flex-wrap: wrap;
+
+      /* f. Adds neat, uniform gutter space between adjacent flex items */
+      gap: 20px;
+
+      /* Container styling for presentation */
+      background-color: #2c3e50;
+      min-height: 250px;
+      padding: 20px;
+      border-radius: 8px;
+      border: 4px dashed #f1c40f;
+    }
+
+    /* ====================================================
+       THE FLEX ITEMS (Children Elements)
+       ==================================================== */
+    .flex-item {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      
+      /* Fixed dimensions so you can see empty space alignments */
+      width: 100px;
+      line-height: 100px; /* Vertically centers text inside the item box */
+      border-radius: 4px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+
+    /* Individual item color overrides */
+    .box-1 { background-color: #e74c3c; color: white; }
+    .box-2 { background-color: #3498db; color: white; }
+    .box-3 { background-color: #2ecc71; color: white; }
+  </style>
+</head>
+<body>
+
+  
+
+  <!-- Parent Flex Container -->
+  <div class="flex-container">
+    <!-- Immediate children automatically become Flex Items -->
+    <div class="flex-item box-1">1</div>
+    <div class="flex-item box-2">2</div>
+    <div class="flex-item box-3">3</div>
+  </div>
+
+</body>
 </html>
