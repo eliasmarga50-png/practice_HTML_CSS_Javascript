@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display vs Visibility Demo</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <h1>CSS Layout Properties</h1>
+
+    <!-- 1. Normal Layout -->
+    <h2>1. Default Behavior (All Visible)</h2>
+    <p>All three blocks take up space in the document flow normally.</p>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2 (Target)</div>
+        <div class="box box-3">Box 3</div>
+    </div>
+
+    <!-- 2. Display None -->
+    <h2>2. Hidden with <code>display: none;</code></h2>
+    <p>Box 2 is completely removed. Box 3 moves left to fill the vacuum.</p>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2 hide-display">Box 2</div>
+        <div class="box box-3">Box 3</div>
+    </div>
+    <div class="note">
+        <strong>Result:</strong> Elements collapse together. Layout structure collapses.
+    </div>
+
+    <!-- 3. Visibility Hidden -->
+    <h2>3. Hidden with <code>visibility: hidden;</code></h2>
+    <p>Box 2 is invisible, but its physical dimensions still occupy space.</p>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2 hide-visibility">Box 2</div>
+        <div class="box box-3">Box 3</div>
+    </div>
+    <div class="note">
+        <strong>Result:</strong> Visual gap remains. Layout structure is perfectly preserved.
+    </div>
+
+</body>
+</html>
